@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <title>CAlculator</title>
+    <center>
+    <h1><u>Calculator</u></h1>
+    </center>
+    <hr>
+   
+</head>
+<body>
+
+
+
+    <table style="display: flex;align-content: center;align-items: center;justify-content: center;" >
+        
+        
+        <td>
+            <!-- <div>
+                <div style="height: 100%;font-size: larger;align-items: center;">
+                    <b><u>Calculator</u></b>
+                </div> 
+            </div>
+            <br><br> -->
+            <center>
+           <div>
+                <b>Enter Number1 : </b>
+                <input type="text" id="v1">
+            </div><br><br>
+            
+                
+                <div>
+                    <b>Enter Number1 : </b>
+                    <input type="text" id="v2">
+                </div><br><br>
+                
+                <div>
+                    <b>Results : </b>
+                    <input type="text" id="result">
+                </div><br><br><br><br>
+                
+            </td>
+                  
+
+      <tr>
+            <td>
+
+                <input type="button" value="Add" id="add" onclick="add()">
+                <input type="button" value="Subtract" id="sub" onclick="sub()">
+                <input type="button" value="Multiply" id="mul" onclick="mul()">
+                <input type="button" value="Divide" id="div" onclick="Divide()">
+            </td>
+        </tr>                  
+    </center>
+  </table>
+
+    <script>
+        function getdata()
+        {
+          let x=parseFloat(document.getElementById("v1").value);
+          let y= parseFloat(document.getElementById("v2").value);
+         
+          return {x,y};
+        }
+
+        function add()
+        {
+            let {x,y} =getdata();
+            document.getElementById('result').value=x+y;
+        }
+
+        function sub()
+        {
+            let {x,y} =getdata();
+            document.getElementById('result').value=x-y;
+        }
+
+        function mul()
+        {
+            let {x,y} =getdata();
+            document.getElementById('result').value=x*y;
+        }
+
+        function Divide()
+        {
+            let {x,y} =getdata();
+            if(y!==0)
+            {
+                document.getElementById('result').value=x/y;
+
+            }
+            else{
+                console.log("Cannot perform division....!")
+            }
+        }
+    </script>
+</body>
+</html>
